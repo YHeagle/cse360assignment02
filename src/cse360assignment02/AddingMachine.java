@@ -8,26 +8,47 @@ package cse360assignment02;
 */ 
 
 public class AddingMachine {
-  private int total;
+  private static int total;
+  private static String toostring = "0";
   
   public AddingMachine () {
     total = 0;  // not needed - included for clarity
   }
   
-  public int getTotal () {
-    return 0;
+  public static int getTotal () {
+    return total;
   }
   
-  public void add (int value) {
+  public static void add (int value) {
+	  total += value;
+	  toostring = toostring + " + " + value;
   }
 
-  public void subtract (int value) {
+  public static void subtract (int value) {
+	  total -= value;
+	  toostring = toostring + " - " + value;
   }
 
-  public String toString () {
-    return "";
+  public static String towString () {
+    return toostring;
   }
 
   public void clear() {
+	  total = 0;
+	  toostring = "0";
+  }
+  
+  
+  public static void main(String[] args)
+  {
+	   add(4);
+	   add(5);
+	   subtract(2);
+	   add(1);
+	   System.out.println(getTotal());
+	   System.out.println(towString());
+	   
+	   
   }
 }
+
