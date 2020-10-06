@@ -1,54 +1,43 @@
 package cse360assignment02;
 
 /**  
-* AddingMachine.java - code implemented
+* AddingMachine.java - A simple adding machine with implementations
 * @author Yinghua Li
-* @version 1.1
-* @see CSE360
+* @version 1.1 
+* @see CSE360 
 */ 
 
 public class AddingMachine {
-  private static int total;
-  private static String toostring = "0";
+  private int total;
+  private String toostring = "0";
   
   public AddingMachine () {
     total = 0;  // not needed - included for clarity
   }
   
-  public static int getTotal () {
+  public int getTotal () {
     return total;
   }
   
-  public static void add (int value) {
+  public void add (int value) {
 	  total += value;
 	  toostring = toostring + " + " + value;
   }
 
-  public static void subtract (int value) {
+  public void subtract (int value) {
 	  total -= value;
 	  toostring = toostring + " - " + value;
   }
 
-  public static String towString () {
+  public String toString () {
     return toostring;
   }
 
-  public static void clear() {
+  public void clear() {
 	  total = 0;
 	  toostring = "0";
   }
   
   
-  public static void main(String[] args)
-  {
-	   add(4);
-	   add(5);
-	   subtract(2);
-	   add(1);
-	   System.out.println(getTotal());
-	   System.out.println(towString());
-	   
-	   
-  }
 }
 
