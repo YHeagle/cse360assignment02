@@ -33,7 +33,7 @@ public class AddingMachine {
     return toostring;
   }
 
-  public void clear() {
+  public static void clear() {
 	  total = 0;
 	  toostring = "0";
   }
