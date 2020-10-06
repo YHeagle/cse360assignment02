@@ -1,7 +1,7 @@
 package cse360assignment02;
 
 /**  
-* AddingMachine.java - A simple adding machine with implementation
+* AddingMachine.java - A simple adding machine with implementations
 * @author Yinghua Li
 * @version 1.1 
 * @see CSE360 
